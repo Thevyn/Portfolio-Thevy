@@ -1,0 +1,52 @@
+@media only screen and (min-device-width: 768px) and (max-device-width: 768px) {
+  .makeStyles-title-2 {
+    font-size: 3.5rem !important;
+  }
+  .jss2 {
+    font-size: 3.5rem !important;
+  }
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+.line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, #fbe555, #ffffff 75%, #ffffff 100%);
+  animation: run 5s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.line:nth-child(1) {
+  margin-left: -25%;
+}
+.line::after {
+  animation-delay: 2s;
+}
+.line:nth-child(3) {
+  margin-left: 25%;
+}
+.line::after {
+  animation-delay: 2.5s;
+}
+
+@keyframes run {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}
